@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/Monitor.css"],"names":[],"mappings":"AAAA,MACE,UAAY,CAGd,eACE,eAAiB","file":"static/css/main.fe844c8f.css","sourcesContent":["video {\n  width: 100%;\n}\n\n.monitorBlocks {\n  margin-top: 20px;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/components/Monitor.css"],"sourceRoot":""}
