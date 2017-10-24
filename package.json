@@ -1,0 +1,40 @@
+{
+  "name": "hls-monitoring-center",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
+    "eject": "react-scripts-ts eject"
+  },
+  "dependencies": {
+    "hls.js": "^0.8.4",
+    "m3u8-parser": "^3.0.0",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.3",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-scripts-ts": "2.8.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.0",
+    "@types/enzyme-adapter-react-16": "^1.0.0",
+    "@types/hls.js": "^0.7.6",
+    "@types/jest": "^21.1.4",
+    "@types/node": "^8.0.44",
+    "@types/react": "^16.0.13",
+    "@types/react-bootstrap": "^0.31.6",
+    "@types/react-dom": "^16.0.1",
+    "@types/react-redux": "^5.0.10",
+    "@types/redux-logger": "^3.0.4",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.0.0",
+    "ts-jest": "^21.1.3"
+  }
+}
