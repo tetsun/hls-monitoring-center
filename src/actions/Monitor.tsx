@@ -56,7 +56,8 @@ function startMonitor(masterPlaylist: string): any {
         parser.end();
         if (parser.manifest.playlists) {
           parser.manifest.playlists.forEach((playlist: any) => {
-            mediaPlaylists.push(baseUrl + playlist.uri);
+            const url = /^https?/.test(playlist.uri) ? playlist.uri : baseUrl + playlist.uri;
+            mediaPlaylists.push(url);
           });
         } else {
           mediaPlaylists.push(masterPlaylist);
