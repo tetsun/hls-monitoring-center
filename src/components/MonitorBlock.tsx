@@ -12,7 +12,7 @@ class MonitorBlock extends React.Component<Props, Object> {
   render() {
     return (
       <div className="hlsjs">
-        <video ref={c => this.video = c as HTMLVideoElement} />
+        <video ref={c => this.video = c as HTMLVideoElement}/>
       </div>
     );
   }
@@ -25,8 +25,17 @@ class MonitorBlock extends React.Component<Props, Object> {
     hls.loadSource(mediaPlaylist);
     hls.attachMedia(this.video);
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      this.video.volume = 0;
       this.video.play();
     });
+    
+    this.video.onmouseover = () => {
+      this.video.volume = 1;
+    };
+    
+    this.video.onmouseout = () => {
+      this.video.volume = 0;
+    };
   }
 }
 
