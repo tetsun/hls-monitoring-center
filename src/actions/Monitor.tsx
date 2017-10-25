@@ -54,9 +54,13 @@ function startMonitor(masterPlaylist: string): any {
         let mediaPlaylists = new Array<string>();
         parser.push(body);
         parser.end();
-        parser.manifest.playlists.forEach((playlist: any) => {
-          mediaPlaylists.push(baseUrl + playlist.uri);
-        });
+        if (parser.manifest.playlists) {
+          parser.manifest.playlists.forEach((playlist: any) => {
+            mediaPlaylists.push(baseUrl + playlist.uri);
+          });
+        } else {
+          mediaPlaylists.push(masterPlaylist);
+        }
         dispatch(startMonitorSuccess(mediaPlaylists));
       })
       .catch(() => {
